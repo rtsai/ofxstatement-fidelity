@@ -42,6 +42,7 @@ class FidelityCSVParser(AbstractStatementParser):
         (re.compile(r"^FED TAX W/H "), "INVBANKTRAN", "DEBIT"),
         (re.compile(r"^CHECK RECEIVED \(Cash\)$"), "INVBANKTRAN", "CREDIT"),
         (re.compile(r"^TRANSFER OF ASSETS CHECK RECEIVED "), "INVBANKTRAN", "CREDIT"),
+        (re.compile(r"^FOREIGN TAX PAID "), "INVBANKTRAN", "DEBIT"),
     ]
 
     def __init__(self, filename: str) -> None:
